@@ -1,0 +1,17 @@
+Project Brief:
+To create a traffic light control system
+
+The first part of this project is to create a pedestrian crosswalk:
+  The traffic lights (for the cars) will stay normally green but when the pedestrian button is pressed it will start a series of events that will turn the lights to red for a brief period.
+    Logic:
+      1. Traffic lights will be green by default.
+      2. When the pedestrian button is pushed it A) sends a signal to the Arduino and B) sets the crossing light
+      3. When the Arduino gets the pedestrian signal it wil:
+          i. Turn off the green, start an internal timer, turn on the amber light.
+          ii. When the timer reaches 10 seconds, it will turn off the amber lights, turn on the red lights
+          iii. When the timer reaches 30 seconds, it will turn off the red lights, it will turn the amber lights on flashing
+          iv. When the timer reaches 40 seconds, it will turn off the flashing amber lights, turn on the green lights, reset the timer
+
+The second part of this project is to add a road of lesser importance to the system:
+  The traffic lights for the main road cars will stay normally green until A) a pedestrian presses the pedestrian button or B) A car comes to the traffic lights on the road of lesser importance or C) Both A and B occur
+  Logic:
